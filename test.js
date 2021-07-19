@@ -15,9 +15,9 @@ function doFactorial(endNum) {
 // console.log(doFactorial(5), " >> '120'");
 
 function pl(count, one, few, many) {
-    let plResult;
-    
-    if(count==1){ plResult = one }
-    else if(){}
+    if(count % 10 == 1){ return `${count} ${one}`; }
+    else if( count % 10 >= 2 && count % 10 <= 4 ){ return `${count} ${few}`; }
+    else if( count % 10 >= 5 && count % 10 < 10 || count % 10 == 0){ return `${count} ${many}`; }
     return;
 }
+console.log(pl(10359, 'стул', 'стула', 'стульев'));
